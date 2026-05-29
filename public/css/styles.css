@@ -188,6 +188,15 @@ img { max-width: 100%; display: block; }
 .about__lang-chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .lang-chip { background: var(--color-bg-card); color: var(--color-primary); border: 1px solid var(--color-primary-lighter); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; }
 
+.about__lang-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.about__lang-item { display: flex; align-items: center; gap: 10px; background: var(--color-bg-card); border: 1px solid var(--color-primary-lighter); border-radius: 12px; padding: 10px 16px; flex: 1; min-width: 140px; }
+.about__lang-flag { font-size: 1.5rem; line-height: 1; }
+.about__lang-info { display: flex; flex-direction: column; gap: 2px; }
+.about__lang-name { font-size: 0.9rem; font-weight: 700; color: var(--color-dark); }
+.about__lang-level { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; width: fit-content; text-transform: uppercase; letter-spacing: 0.5px; }
+.about__lang-level--native { background: #7c3aed; color: #fff; }
+.about__lang-level--basic { background: var(--color-primary-lighter); color: var(--color-primary); }
+
 /* EXPERIENCE */
 .timeline { position: relative; max-width: 720px; margin: 0 auto; }
 .timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-light)); }
