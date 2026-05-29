@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Sergio Plaza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="login-view" id="loginView">
+    <div class="login-card">
+      <div class="login-logo">SP<span>.</span></div>
+      <h1 class="login-title">Panel Admin</h1>
+      <p class="login-sub">Introduce la contraseña para continuar</p>
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+        <div class="form-error hidden" id="loginError">Contraseña incorrecta</div>
+        <button type="submit" class="btn-admin btn-admin--primary" id="loginBtn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard hidden" id="dashboard">
+    <header class="admin-header">
+      <div class="admin-header__left">
+        <span class="admin-logo">SP<span>.</span></span>
+        <span class="admin-title">Panel de Administración</span>
+      </div>
+      <div class="admin-header__right">
+        <a href="/" target="_blank" class="btn-admin btn-admin--ghost">
+          <i class="fas fa-external-link-alt"></i> Ver web
+        </a>
+        <button class="btn-admin btn-admin--ghost" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i> Salir
+        </button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="admin-container">
+
+        <!-- Lista de proyectos -->
+        <div class="admin-section" id="projectListSection">
+          <div class="admin-section__header">
+            <h2>Proyectos</h2>
+            <button class="btn-admin btn-admin--primary" id="newProjectBtn">
+              <i class="fas fa-plus"></i> Nuevo proyecto
+            </button>
+          </div>
+          <div id="projectList">
+            <div class="loading-state"><i class="fas fa-circle-notch fa-spin"></i> Cargando...</div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="admin-section hidden" id="projectFormSection">
+          <div class="admin-section__header">
+            <h2 id="formTitle">Nuevo proyecto</h2>
+            <button class="btn-admin btn-admin--ghost-dark" id="cancelFormBtn">
+              <i class="fas fa-arrow-left"></i> Volver
+            </button>
+          </div>
+          <form class="project-form" id="projectForm">
+            <input type="hidden" id="projectId">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectName">Nombre *</label>
+                <input type="text" id="projectName" required placeholder="Nombre del proyecto">
+              </div>
+              <div class="form-group">
+                <label for="projectTech">Tecnologías *</label>
+                <input type="text" id="projectTech" required placeholder="Laravel, MySQL, Docker">
+                <small>Separadas por comas</small>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:16px">
+              <label for="projectDesc">Descripción *</label>
+              <textarea id="projectDesc" required placeholder="Describe el proyecto..." rows="3"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectImage">URL de imagen</label>
+                <input type="url" id="projectImage" placeholder="https://...">
+              </div>
+              <div class="form-group">
+                <label for="projectGithub">URL GitHub</label>
+                <input type="url" id="projectGithub" placeholder="https://github.com/...">
+              </div>
+            </div>
+            <div class="form-row" style="margin-top:16px">
+              <div class="form-group">
+                <label for="projectLive">URL Live</label>
+                <input type="url" id="projectLive" placeholder="https://...">
+              </div>
+              <div class="form-group form-group--checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="projectVisible" checked>
+                  <span>Visible en el portfolio</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-admin btn-admin--primary" id="saveBtn">
+                <i class="fas fa-save"></i> Guardar proyecto
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="/admin/js/admin.js"></script>
+</body>
+</html>
