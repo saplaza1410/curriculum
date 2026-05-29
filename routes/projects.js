@@ -26,4 +26,45 @@ router.get('/all', requireAuth, (req, res) => {
   res.json(readProjects());
 });
 
+router.post('/', requireAuth, (req, res) => {
+  const projects = readProjects();
+  const project = {
+    id: uuidv4(),
+    name: req.body.name || '',
+    description: req.body.description || '',
+    technologies: Array.isArray(req.body.technologies)
+      ? req.body.technologies
+      : (req.body.technologies || '').split(',').map(t => t.trim()).filter(Boolean),
+    image: req.body.image || '',
+    github: req.body.github || '',
+    live: req.body.live || '',
+    visible: req.body.visible !== false && req.body.visible !== 'false'
+  };
+  projects.push(project);
+  writeProjects(projects);
+  res.status(201).json(project);
+});
+
+router.put('/:id', requireAuth, (req, res) => {
+  const projects = readProjects();
+  const index = projects.findIndex(p => p.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'No encontrado' });
+  const updated = { ...projects[index], ...req.body };
+  if (req.body.technologies && !Array.isArray(req.body.technologies)) {
+    updated.technologies = req.body.technologies.split(',').map(t => t.trim()).filter(Boolean);
+  }
+  projects[index] = updated;
+  writeProjects(projects);
+  res.json(updated);
+});
+
+router.delete('/:id', requireAuth, (req, res) => {
+  const projects = readProjects();
+  const index = projects.findIndex(p => p.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'No encontrado' });
+  projects.splice(index, 1);
+  writeProjects(projects);
+  res.json({ ok: true });
+});
+
 module.exports = { router, readProjects, writeProjects };
