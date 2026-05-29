@@ -1,3 +1,41 @@
+// Language switcher
+function applyLang(lang) {
+  const t = TRANSLATIONS[lang];
+  if (!t) return;
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // Update active button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // Re-render projects if already loaded (translate loading/error states)
+  const grid = document.getElementById('projectsGrid');
+  if (grid && grid.querySelector('.portfolio__loading')) {
+    grid.querySelector('.portfolio__loading span').textContent = t.portfolio_loading;
+  }
+}
+
+document.getElementById('langSwitcher').addEventListener('click', e => {
+  const btn = e.target.closest('.lang-btn');
+  if (btn) applyLang(btn.dataset.lang);
+});
+
+// Apply saved or browser language on load
+const savedLang = localStorage.getItem('lang');
+const browserLang = navigator.language.slice(0, 2);
+const defaultLang = savedLang || (['es','ca','en'].includes(browserLang) ? browserLang : 'es');
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -63,4 +101,8 @@ async function loadProjects() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadProjects);
+document.addEventListener('DOMContentLoaded', () => {
+  loadProjects();
+  if (defaultLang !== 'es') applyLang(defaultLang);
+  else applyLang('es');
+});

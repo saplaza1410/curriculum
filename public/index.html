@@ -19,12 +19,17 @@
     <div class="container navbar__inner">
       <a href="#inicio" class="navbar__logo"><span class="logo-bracket">{</span>SP<span class="logo-bracket">}</span></a>
       <ul class="navbar__links" id="navLinks">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+        <li><a href="#experiencia" data-i18n="nav_experience">Experiencia</a></li>
+        <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
       </ul>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="ca">CA</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
       <button class="navbar__burger" id="navBurger" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
@@ -39,10 +44,10 @@
              onerror="this.src='https://ui-avatars.com/api/?name=Sergio+Plaza&size=400&background=7c3aed&color=fff&bold=true'">
       </div>
       <div class="hero__content fade-in">
-        <p class="hero__greeting">Hola, soy</p>
+        <p class="hero__greeting" data-i18n="hero_greeting">Hola, soy</p>
         <h1 class="hero__name">Sergio Plaza</h1>
-        <h2 class="hero__title">Full Stack Developer</h2>
-        <p class="hero__bio">
+        <h2 class="hero__title" data-i18n="hero_title">Full Stack Developer</h2>
+        <p class="hero__bio" data-i18n-html="hero_bio">
           Desarrollador Full Stack con <strong>5+ años de experiencia</strong> en PHP (Laravel, CakePHP),
           APIs REST, Docker y desarrollo móvil cross-platform con Ionic y React Native.
           Integro <strong>IA en el flujo de trabajo</strong> — Cursor, Claude Code y GitHub Copilot —
@@ -50,8 +55,8 @@
           Castellano nativo · Catalán · English.
         </p>
         <div class="hero__actions">
-          <a href="#portfolio" class="btn btn-primary">Ver proyectos</a>
-          <a href="#contacto" class="btn btn-outline">Contactar</a>
+          <a href="#portfolio" class="btn btn-primary" data-i18n="hero_btn_projects">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-outline" data-i18n="hero_btn_contact">Contactar</a>
         </div>
         <div class="hero__social">
           <a href="https://github.com/saplaza1410" target="_blank" rel="noopener" aria-label="GitHub">
@@ -67,7 +72,7 @@
       </div>
     </div>
     <div class="hero__scroll-hint">
-      <span>Scroll</span>
+      <span data-i18n="scroll_hint">Scroll</span>
       <i class="fas fa-chevron-down"></i>
     </div>
   </section>
@@ -75,9 +80,9 @@
   <!-- SOBRE MÍ -->
   <section class="section about" id="sobre-mi">
     <div class="container">
-      <h2 class="section-title">Sobre <span>mí</span></h2>
+      <h2 class="section-title" data-i18n-html="about_title">Sobre <span>mí</span></h2>
       <div class="about__card glass-light">
-        <p class="about__bio">
+        <p class="about__bio" data-i18n-html="about_bio">
           Desarrollador Full Stack con <strong>5+ años de experiencia</strong> en arquitecturas robustas
           con PHP (Laravel, CakePHP, Nativo), enfocado en soluciones escalables y alta eficiencia.
           Experto en diseño de <strong>APIs REST</strong>, integración de sistemas complejos,
@@ -91,7 +96,7 @@
         <div class="about__meta">
           <div class="about__meta-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Figueres, Girona, España</span>
+            <span data-i18n="about_location">Figueres, Girona, España</span>
           </div>
           <div class="about__meta-item">
             <i class="fas fa-envelope"></i>
@@ -103,27 +108,27 @@
           </div>
         </div>
         <div class="about__languages">
-          <h4>Idiomas</h4>
+          <h4 data-i18n="about_languages_title">Idiomas</h4>
           <div class="about__lang-list">
             <div class="about__lang-item">
               <span class="about__lang-flag">🇪🇸</span>
               <div class="about__lang-info">
                 <span class="about__lang-name">Castellano</span>
-                <span class="about__lang-level about__lang-level--native">Nativo</span>
+                <span class="about__lang-level about__lang-level--native" data-i18n="lang_native">Nativo</span>
               </div>
             </div>
             <div class="about__lang-item">
               <span class="about__lang-flag">🏴󠁥󠁳󠁣󠁴󠁿</span>
               <div class="about__lang-info">
                 <span class="about__lang-name">Catalán</span>
-                <span class="about__lang-level about__lang-level--basic">Básico</span>
+                <span class="about__lang-level about__lang-level--basic" data-i18n="lang_basic">Básico</span>
               </div>
             </div>
             <div class="about__lang-item">
               <span class="about__lang-flag">🇬🇧</span>
               <div class="about__lang-info">
                 <span class="about__lang-name">English</span>
-                <span class="about__lang-level about__lang-level--basic">Básico</span>
+                <span class="about__lang-level about__lang-level--basic" data-i18n="lang_basic">Básico</span>
               </div>
             </div>
           </div>
@@ -135,16 +140,16 @@
   <!-- EXPERIENCIA -->
   <section class="section experience" id="experiencia">
     <div class="container">
-      <h2 class="section-title">Mi <span>experiencia</span></h2>
+      <h2 class="section-title" data-i18n-html="exp_title">Mi <span>experiencia</span></h2>
       <div class="timeline">
 
         <div class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
             <span class="timeline__date">01/2025 — Actual</span>
-            <h3 class="timeline__role">Desarrollador Web &amp; Coordinador de Outsourcing</h3>
+            <h3 class="timeline__role" data-i18n="exp_avantiam_role">Desarrollador Web &amp; Coordinador de Outsourcing</h3>
             <h4 class="timeline__company">Avantiam · España</h4>
-            <p class="timeline__desc">Desarrollo y mantenimiento de webs con CakePHP. Coordinación del servicio de outsourcing que Avantiam ofrece a otras empresas: gestión de proyectos, comunicación con clientes y supervisión técnica, apoyado en herramientas de IA — Cursor, Claude Code y GitHub Copilot — para optimizar entregas y calidad del código.</p>
+            <p class="timeline__desc" data-i18n="exp_avantiam_desc">Desarrollo y mantenimiento de webs con CakePHP. Coordinación del servicio de outsourcing que Avantiam ofrece a otras empresas: gestión de proyectos, comunicación con clientes y supervisión técnica, apoyado en herramientas de IA — Cursor, Claude Code y GitHub Copilot — para optimizar entregas y calidad del código.</p>
             <div class="timeline__tags"><span>CakePHP</span><span>PHP</span><span>Cursor</span><span>Claude Code</span><span>Copilot</span></div>
           </div>
         </div>
@@ -155,7 +160,7 @@
             <span class="timeline__date">06/2021 — 04/2024</span>
             <h3 class="timeline__role">Desarrollador Web</h3>
             <h4 class="timeline__company">Tiendapp · Colombia</h4>
-            <p class="timeline__desc">Desarrollo y mantenimiento del core de la plataforma y las aplicaciones móviles de la empresa. Participación activa en la arquitectura de microservicios con Go, APIs REST con Laravel y apps cross-platform con Ionic y Angular. Colaboración directa con el equipo de producto para lanzar nuevas funcionalidades en entornos de alta demanda.</p>
+            <p class="timeline__desc" data-i18n="exp_tiendapp_desc">Desarrollo y mantenimiento del core de la plataforma y las aplicaciones móviles de la empresa. Participación activa en la arquitectura de microservicios con Go, APIs REST con Laravel y apps cross-platform con Ionic y Angular. Colaboración directa con el equipo de producto para lanzar nuevas funcionalidades en entornos de alta demanda.</p>
             <div class="timeline__tags"><span>Laravel</span><span>Go</span><span>Ionic</span><span>Angular</span><span>REST API</span><span>MySQL</span></div>
           </div>
         </div>
@@ -166,7 +171,7 @@
             <span class="timeline__date">05/2017 — 12/2021</span>
             <h3 class="timeline__role">Desarrollador Web</h3>
             <h4 class="timeline__company">Critic SAS · Colombia</h4>
-            <p class="timeline__desc">Evolución y mantenimiento del sistema core de la empresa, desarrollado en Laravel y PHP nativo. Refactorización de módulos críticos, optimización de consultas SQL y mejora del rendimiento general de la aplicación. Implementación de nuevas funcionalidades bajo metodología ágil con entregas continuas.</p>
+            <p class="timeline__desc" data-i18n="exp_critic_desc">Evolución y mantenimiento del sistema core de la empresa, desarrollado en Laravel y PHP nativo. Refactorización de módulos críticos, optimización de consultas SQL y mejora del rendimiento general de la aplicación. Implementación de nuevas funcionalidades bajo metodología ágil con entregas continuas.</p>
             <div class="timeline__tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>REST API</span><span>Scrum</span></div>
           </div>
         </div>
@@ -177,7 +182,7 @@
             <span class="timeline__date">12/2016 — 04/2017</span>
             <h3 class="timeline__role">Desarrollador Web</h3>
             <h4 class="timeline__company">Parsonic Solucions · Colombia</h4>
-            <p class="timeline__desc">Desarrollo y mejora de la aplicación interna de gestión empresarial en Laravel y PHP nativo. Implementación de nuevos módulos, corrección de bugs y mantenimiento de la base de datos. Primer contacto con flujos de trabajo profesionales en equipo y buenas prácticas de desarrollo.</p>
+            <p class="timeline__desc" data-i18n="exp_parsonic_desc">Desarrollo y mejora de la aplicación interna de gestión empresarial en Laravel y PHP nativo. Implementación de nuevos módulos, corrección de bugs y mantenimiento de la base de datos. Primer contacto con flujos de trabajo profesionales en equipo y buenas prácticas de desarrollo.</p>
             <div class="timeline__tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Git</span></div>
           </div>
         </div>
@@ -186,9 +191,9 @@
           <div class="timeline__dot"></div>
           <div class="timeline__card">
             <span class="timeline__date">10/2015 — 12/2016</span>
-            <h3 class="timeline__role">Desarrollador Junior</h3>
+            <h3 class="timeline__role" data-i18n="exp_strategee_role">Desarrollador Junior</h3>
             <h4 class="timeline__company">Strategee Group · Colombia</h4>
-            <p class="timeline__desc">Desarrollo de sitios web a medida para clientes externos, cubriendo tanto frontend como backend. Creación de interfaces con animaciones CSS/JS y lógica de negocio con CakePHP. Primera experiencia trabajando directamente con clientes y entregando proyectos completos de principio a fin.</p>
+            <p class="timeline__desc" data-i18n="exp_strategee_desc">Desarrollo de sitios web a medida para clientes externos, cubriendo tanto frontend como backend. Creación de interfaces con animaciones CSS/JS y lógica de negocio con CakePHP. Primera experiencia trabajando directamente con clientes y entregando proyectos completos de principio a fin.</p>
             <div class="timeline__tags"><span>CakePHP</span><span>JavaScript</span><span>CSS</span><span>HTML</span><span>jQuery</span></div>
           </div>
         </div>
@@ -200,7 +205,7 @@
   <!-- HABILIDADES -->
   <section class="section skills" id="habilidades">
     <div class="container">
-      <h2 class="section-title">Mis <span>habilidades</span></h2>
+      <h2 class="section-title" data-i18n-html="skills_title">Mis <span>habilidades</span></h2>
       <div class="skills__grid">
         <div class="skill-card">
           <div class="skill-card__icon"><i class="fab fa-php"></i></div>
@@ -273,7 +278,7 @@
       </div>
 
       <div class="skills__divider">
-        <span>IA &amp; Herramientas</span>
+        <span data-i18n="skills_ai_divider">IA &amp; Herramientas</span>
       </div>
 
       <div class="skills__grid">
@@ -349,7 +354,7 @@
   <!-- PORTFOLIO -->
   <section class="section portfolio" id="portfolio">
     <div class="container">
-      <h2 class="section-title">Mi <span>portfolio</span></h2>
+      <h2 class="section-title" data-i18n-html="portfolio_title">Mi <span>portfolio</span></h2>
       <div class="portfolio__grid" id="projectsGrid">
         <div class="portfolio__loading">
           <i class="fas fa-circle-notch fa-spin"></i>
@@ -362,34 +367,34 @@
   <!-- CONTACTO -->
   <section class="section contact" id="contacto">
     <div class="container">
-      <h2 class="section-title" style="color:#fff">Ponte en <span style="color:var(--color-primary-light)">contacto</span></h2>
-      <p class="contact__subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+      <h2 class="section-title" style="color:#fff" data-i18n-html="contact_title">Ponte en <span style="color:var(--color-primary-light)">contacto</span></h2>
+      <p class="contact__subtitle" data-i18n="contact_subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
       <div class="contact__cards">
         <a href="mailto:saplaza1410@gmail.com" class="contact__card">
           <div class="contact__card-icon"><i class="fas fa-envelope"></i></div>
           <div>
-            <div class="contact__card-label">Email</div>
+            <div class="contact__card-label" data-i18n="contact_email_label">Email</div>
             <div class="contact__card-value">saplaza1410@gmail.com</div>
           </div>
         </a>
         <a href="https://wa.me/34613715884" target="_blank" rel="noopener" class="contact__card">
           <div class="contact__card-icon contact__card-icon--wa"><i class="fab fa-whatsapp"></i></div>
           <div>
-            <div class="contact__card-label">WhatsApp</div>
+            <div class="contact__card-label" data-i18n="contact_wa_label">WhatsApp</div>
             <div class="contact__card-value">+34 613 71 58 84</div>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/sergio-plaza-a4589b99/" target="_blank" rel="noopener" class="contact__card">
           <div class="contact__card-icon contact__card-icon--li"><i class="fab fa-linkedin-in"></i></div>
           <div>
-            <div class="contact__card-label">LinkedIn</div>
+            <div class="contact__card-label" data-i18n="contact_li_label">LinkedIn</div>
             <div class="contact__card-value">sergio-plaza-a4589b99</div>
           </div>
         </a>
         <a href="https://github.com/saplaza1410" target="_blank" rel="noopener" class="contact__card">
           <div class="contact__card-icon contact__card-icon--gh"><i class="fab fa-github"></i></div>
           <div>
-            <div class="contact__card-label">GitHub</div>
+            <div class="contact__card-label" data-i18n="contact_gh_label">GitHub</div>
             <div class="contact__card-value">saplaza1410</div>
           </div>
         </a>
@@ -401,7 +406,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <span class="footer__logo"><span class="logo-bracket">{</span>SP<span class="logo-bracket">}</span></span>
-      <p class="footer__copy">© 2025 Sergio Plaza. Hecho con 💜</p>
+      <p class="footer__copy" data-i18n="footer_copy">© 2025 Sergio Plaza. Hecho con 💜</p>
       <div class="footer__social">
         <a href="https://github.com/saplaza1410" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/sergio-plaza-a4589b99/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -410,6 +415,7 @@
     </div>
   </footer>
 
+  <script src="/js/translations.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
