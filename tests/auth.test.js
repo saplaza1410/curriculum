@@ -2,6 +2,9 @@ const request = require('supertest');
 const app = require('../server');
 
 describe('Auth API', () => {
+  const originalPassword = process.env.ADMIN_PASSWORD;
+  afterAll(() => { process.env.ADMIN_PASSWORD = originalPassword; });
+
   test('POST /api/auth/login - contraseña incorrecta → 401', async () => {
     const res = await request(app)
       .post('/api/auth/login')
