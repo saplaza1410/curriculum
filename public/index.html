@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Plaza — Full Stack Developer</title>
+  <meta name="description" content="Portfolio de Sergio Plaza, Desarrollador Full Stack con 5+ años de experiencia en PHP, Laravel, Docker y más.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="navbar__logo">SP<span>.</span></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="navbar__burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+      <div class="hero__photo">
+        <img src="/assets/profile.jpg" alt="Sergio Plaza" id="profilePhoto"
+             onerror="this.src='https://ui-avatars.com/api/?name=Sergio+Plaza&size=400&background=7c3aed&color=fff&bold=true'">
+      </div>
+      <div class="hero__content fade-in">
+        <p class="hero__greeting">Hola, soy</p>
+        <h1 class="hero__name">Sergio Plaza</h1>
+        <h2 class="hero__title">Full Stack Developer</h2>
+        <p class="hero__bio">
+          Desarrollador Full Stack con <strong>5+ años de experiencia</strong> en PHP (Laravel, CakePHP),
+          APIs REST, Docker y desarrollo móvil cross-platform con Ionic y React Native.
+        </p>
+        <div class="hero__actions">
+          <a href="#portfolio" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-outline">Contactar</a>
+        </div>
+        <div class="hero__social">
+          <a href="https://github.com/saplaza1410" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sergio-plaza-a4589b99/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/34613715884" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section about" id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title">Sobre <span>mí</span></h2>
+      <div class="about__card glass-light">
+        <p class="about__bio">
+          Desarrollador Full Stack con <strong>5+ años de experiencia</strong> en arquitecturas robustas
+          con PHP (Laravel, CakePHP, Nativo), enfocado en soluciones escalables y alta eficiencia.
+          Experto en diseño de <strong>APIs REST</strong>, integración de sistemas complejos,
+          optimización de rendimiento en entornos cloud (<strong>AWS/Docker</strong>) y desarrollo de
+          aplicaciones móviles cross-platform (<strong>Ionic, React Native</strong>).
+        </p>
+        <div class="about__meta">
+          <div class="about__meta-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Figueres, Girona, España</span>
+          </div>
+          <div class="about__meta-item">
+            <i class="fas fa-envelope"></i>
+            <span>saplaza1410@gmail.com</span>
+          </div>
+          <div class="about__meta-item">
+            <i class="fas fa-phone"></i>
+            <span>+34 613 71 58 84</span>
+          </div>
+        </div>
+        <div class="about__languages">
+          <h4>Idiomas</h4>
+          <div class="about__lang-chips">
+            <span class="lang-chip">🇪🇸 Castellano — Nativo</span>
+            <span class="lang-chip">🏴󠁥󠁳󠁣󠁴󠁿 Catalán — Básico</span>
+            <span class="lang-chip">🇬🇧 Inglés — Básico</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="section experience" id="experiencia">
+    <div class="container">
+      <h2 class="section-title">Mi <span>experiencia</span></h2>
+      <div class="timeline">
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">01/2025 — Actual</span>
+            <h3 class="timeline__role">Desarrollador Web</h3>
+            <h4 class="timeline__company">Avantiam · España</h4>
+            <p class="timeline__desc">Desarrollar y mantener webs de la empresa con cakePHP entre otras.</p>
+            <div class="timeline__tags"><span>CakePHP</span><span>PHP</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">06/2021 — 04/2024</span>
+            <h3 class="timeline__role">Desarrollador Web</h3>
+            <h4 class="timeline__company">Tiendapp · Colombia</h4>
+            <p class="timeline__desc">Desarrollar y mantener el core y las apps de la empresa con Laravel, Go, Ionic y Angular entre otras.</p>
+            <div class="timeline__tags"><span>Laravel</span><span>Go</span><span>Ionic</span><span>Angular</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">05/2017 — 12/2021</span>
+            <h3 class="timeline__role">Desarrollador Web</h3>
+            <h4 class="timeline__company">Critic SAS · Colombia</h4>
+            <p class="timeline__desc">Desarrollar y mejorar el código fuente del app core realizada en Laravel y PHP nativo.</p>
+            <div class="timeline__tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">12/2016 — 04/2017</span>
+            <h3 class="timeline__role">Desarrollador Web</h3>
+            <h4 class="timeline__company">Parsonic Solucions · Colombia</h4>
+            <p class="timeline__desc">Desarrollar y mejorar las funcionalidades del app interna desarrollada en Laravel y PHP nativo.</p>
+            <div class="timeline__tags"><span>Laravel</span><span>PHP</span></div>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">10/2015 — 12/2016</span>
+            <h3 class="timeline__role">Desarrollador Junior</h3>
+            <h4 class="timeline__company">Strategee Group · Colombia</h4>
+            <p class="timeline__desc">Desarrollar páginas a la medida para clientes en el front end y el back end creando animaciones y con CakePHP.</p>
+            <div class="timeline__tags"><span>CakePHP</span><span>JavaScript</span><span>CSS</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section skills" id="habilidades">
+    <div class="container">
+      <h2 class="section-title">Mis <span>habilidades</span></h2>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <div class="skill-card__icon"><i class="fab fa-php"></i></div>
+          <span>PHP</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel">
+          </div>
+          <span>Laravel</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cakephp/cakephp-original.svg" alt="CakePHP">
+          </div>
+          <span>CakePHP</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go">
+          </div>
+          <span>Go</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
+          </div>
+          <span>Angular</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" alt="Ionic">
+          </div>
+          <span>Ionic</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
+          </div>
+          <span>React Native</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+          </div>
+          <span>Docker</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+          </div>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+          </div>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          </div>
+          <span>Git</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><i class="fas fa-users-cog"></i></div>
+          <span>Scrum</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="section-title">Mi <span>portfolio</span></h2>
+      <div class="portfolio__grid" id="projectsGrid">
+        <div class="portfolio__loading">
+          <i class="fas fa-circle-notch fa-spin"></i>
+          <span>Cargando proyectos...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <h2 class="section-title" style="color:#fff">Ponte en <span style="color:var(--color-primary-light)">contacto</span></h2>
+      <p class="contact__subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+      <div class="contact__cards">
+        <a href="mailto:saplaza1410@gmail.com" class="contact__card">
+          <div class="contact__card-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact__card-label">Email</div>
+            <div class="contact__card-value">saplaza1410@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://wa.me/34613715884" target="_blank" rel="noopener" class="contact__card">
+          <div class="contact__card-icon contact__card-icon--wa"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <div class="contact__card-label">WhatsApp</div>
+            <div class="contact__card-value">+34 613 71 58 84</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/sergio-plaza-a4589b99/" target="_blank" rel="noopener" class="contact__card">
+          <div class="contact__card-icon contact__card-icon--li"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="contact__card-label">LinkedIn</div>
+            <div class="contact__card-value">sergio-plaza-a4589b99</div>
+          </div>
+        </a>
+        <a href="https://github.com/saplaza1410" target="_blank" rel="noopener" class="contact__card">
+          <div class="contact__card-icon contact__card-icon--gh"><i class="fab fa-github"></i></div>
+          <div>
+            <div class="contact__card-label">GitHub</div>
+            <div class="contact__card-value">saplaza1410</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">SP<span>.</span></span>
+      <p class="footer__copy">© 2025 Sergio Plaza. Hecho con 💜</p>
+      <div class="footer__social">
+        <a href="https://github.com/saplaza1410" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sergio-plaza-a4589b99/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/34613715884" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
