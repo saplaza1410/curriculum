@@ -65,6 +65,13 @@ img { max-width: 100%; display: block; }
   .section-title { font-size: 1.6rem; }
 }
 
+/* LOGO */
+.navbar__logo,
+.footer__logo {
+  font-family: 'Courier New', Courier, monospace;
+}
+.logo-bracket { color: var(--color-primary-light); }
+
 /* NAVBAR */
 .navbar {
   position: fixed;
